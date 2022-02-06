@@ -5,3 +5,13 @@ body {
   max-width: 38rem;
   padding: 2rem;
 }
+
+.title, .message {
+  text-align: center;
+}
+.message {
+  margin: 0px 0 16px 0;
+}
+.title {
+  margin: 16px 0 0px 0;
+}
