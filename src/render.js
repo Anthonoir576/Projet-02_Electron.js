@@ -1,7 +1,8 @@
-// import
+// #################### import ###########################
+// -------------------------------------------------------
+
 const { desktopCapturer, remote}   = require('electron');
 const { Menu }                     = remote;
-
 
 // btn
 const videoElement                 = document.querySelector('video');
@@ -11,8 +12,16 @@ const videoSelectBtn               = document.getElementById('videoSelectBtn');
 
 videoSelectBtn.onclick             = getVideoSources;
 
+// -------------------------------------------------------
+// #######################################################
 
-// fonction
+
+
+
+
+// ################### fonction ##########################
+// -------------------------------------------------------
+
 async function getVideoSources() {
 
     const inputSources = await desktopCapturer.getSources({
@@ -29,4 +38,26 @@ async function getVideoSources() {
     );
 
     videoOptionsMenu.popup();
+};
+
+async function selectSource(source) {
+
+    videoSelectBtn.innerText = source.name;
+
+    const constraints = {
+        audio: false,
+        video: {
+            mandatory: {
+                chromeMediaSource: 'desktop',
+                chromeMediaSourceId: source.id
+            }
+        }
+    };
+
+    const stream = await navigator.mediaDevices
+        .getUserMedia(constraints);
+
+    videoElement.srcObject = stream;
+    videoElement.play();    
+
 };
