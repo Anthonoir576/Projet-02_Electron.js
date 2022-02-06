@@ -107,12 +107,12 @@ async function handleStop(e) {
 stopBtn.onclick = (e) => {
     mediaRecorder.stop();
     startBtn.classList.remove('BTN-red');
-    startBtn.innerText = 'Start';
+    startBtn.classList.add('BTN-green');
 };
 startBtn.onclick = (e) => {
   mediaRecorder.start();
   startBtn.classList.add('BTN-red');
-  startBtn.innerText = 'Recording';
+  startBtn.classList.remove('BTN-green');
 };
 
 // -------------------------------------------------------
