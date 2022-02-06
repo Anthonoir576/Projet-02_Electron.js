@@ -45,3 +45,7 @@ button {
   max-height: 500px;
 
 }
+
+.BTN-red {
+  background: red;
+}
