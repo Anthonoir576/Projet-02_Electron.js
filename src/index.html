@@ -1,13 +1,27 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hello World!</title>
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <h1 class="title">CAPTURE D'ECRAN </h1>
-    <hr />
-    <p class="message">START pour commençer / STOP pour arrêter</p>
-  </body>
-</html>
+  <html>
+    
+    <head>
+      <meta charset="UTF-8" />
+      <title>Capture d'écran - by F.E</title>
+      <link rel="stylesheet" href="index.css" />
+      <script defer src="render.js"></script>
+    </head>
+
+    <body>
+      <div class="presentation-logiciel">
+        <h1 class="title">CAPTURE D'ECRAN </h1>
+        <hr />
+        <p class="message">START pour commençer / STOP pour arrêter</p>
+      </div>
+
+      <div class="logique-logiciel">
+        <video></video>
+        <div class="bouton-principal">
+          <button id="startBtn">START</button>
+          <button id="stopBtn">STOP</button>
+        </div>
+      </div>
+    </body>
+
+  </html>

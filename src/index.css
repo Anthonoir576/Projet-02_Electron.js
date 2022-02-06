@@ -4,6 +4,7 @@ body {
   margin: auto;
   max-width: 38rem;
   padding: 2rem;
+  background: rgb(65, 64, 133);
 }
 
 .title, .message {
@@ -14,4 +15,14 @@ body {
 }
 .title {
   margin: 16px 0 0px 0;
+}
+.bouton-principal {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bouton-principal button {
+  display: block;
+  padding: 10px 20px;
+  cursor: pointer;
 }
