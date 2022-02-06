@@ -4,7 +4,12 @@
     <head>
       <meta charset="UTF-8" />
       <title>Capture d'écran - by F.E</title>
+
+      <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+      <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+
       <link rel="stylesheet" href="index.css" />
+      
       <script defer src="render.js"></script>
     </head>
 
@@ -20,6 +25,11 @@
         <div class="bouton-principal">
           <button id="startBtn">START</button>
           <button id="stopBtn">STOP</button>
+        </div>
+        <div class="bouton-secondaire">
+          <button id="videoSelectBtn">
+            Format vidéo
+          </button>
         </div>
       </div>
     </body>
